@@ -14,13 +14,40 @@ import PlaygroundSupport
  
  */
 // Create canvas
-let canvas = Canvas(width: 400, height: 300)
+let canvas = Canvas(width: 400, height: 100)
 /*:
  ## Add your code below
  
  Fill in the blanks below the comments
  */
 // Loop 4 times, counting up by 100, from 0
+
+for i in stride (from: 0, to: 400, by: 100)
+    
+{
+    
+    let randomvalue = random(from: 1, toButNotIncluding: 3)
+    
+    if randomvalue == 1 {
+        canvas.fillColor = Color.black
+        canvas.textColor = Color.white
+        canvas.drawRectangle(bottomLeftX: i, bottomLeftY: 0, width: 100, height: 100)
+        canvas.drawText(message: "1", size: 24, x: i, y: 20)
+        
+    }
+    else {
+        canvas.fillColor = Color.white
+        canvas.textColor = Color.black
+        canvas.drawRectangle(bottomLeftX: i, bottomLeftY: 0, width: 100, height: 100)
+        canvas.drawText(message: "2", size: 24, x: i, y: 20)
+        
+    }
+    
+    
+    
+    
+    
+}
 
 // Inside the loop, generate a random number (1 or 2)
 
